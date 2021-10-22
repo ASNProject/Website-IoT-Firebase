@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internet of Things</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <a href="home.html"
+          ><img src="image/image3.png" alt="" style="width: 200px"
+        /></a>
+        <nav></nav>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav">
+            <a
+              href="setting.html"
+              class="nav-item nav-link"
+              style="
+                color: #707070;
+                font-weight: bold;
+                margin-right: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              "
+              >SETTING</a
+            >
+            <a
+              href="rakap.html"
+              class="nav-item nav-link"
+              style="
+                color: #707070;
+                font-weight: bold;
+                margin-right: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              "
+              >REKAP</a
+            >
+            <a
+              href="index.html"
+              class="nav-item nav-link"
+              style="
+                color: #707070;
+                font-weight: bold;
+                margin-right: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              "
+              >LOGOUT</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="navbar">
+        <p
+          style="
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #707070;
+            font-weight: bold;
+          "
+        >
+          Halaman Mode:
+        </p>
+        <p
+          style="
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #707070;
+            font-weight: bold;
+            margin-left: 10px;
+          "
+          id="halamanstatus"
+        >
+          Status
+        </p>
+        <p
+          style="
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #707070;
+            margin-left: 10px;
+            font-weight: bold;
+          "
+        >
+          Ruang Tamu Mode:
+        </p>
+        <p
+          style="
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #707070;
+            font-weight: bold;
+            margin-left: 10px;
+          "
+          id="ruangtamustatus"
+        >
+          Status
+        </p>
+        <nav></nav>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav">
+            <a
+              href="#"
+              class="nav-item nav-link"
+              style="
+                color: #707070;
+                font-weight: bold;
+                margin-right: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              "
+              >TDL/KwH</a
+            >
+            <input
+              type="text"
+              style="
+                margin: 10px;
+                text-align: center;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              "
+              id="inputtdc"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="col-1"
+          style="margin-top: 40px; height: 200px; width: 300px"
+        >
+          <h1
+            style="
+              font-size: 20px;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              color: #707070;
+              text-align: center;
+            "
+          >
+            PERANGKAT
+          </h1>
+          <h1
+            style="
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              font-size: 20px;
+              margin-left: 20px;
+              color: #707070;
+            "
+          >
+            1. Lampu Halaman
+          </h1>
+          <h1
+            style="
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              font-size: 20px;
+              margin-left: 20px;
+              color: #707070;
+            "
+          >
+            2. Lampu Ruang Tamu
+          </h1>
+          <h1
+            style="
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              font-size: 20px;
+              margin-left: 20px;
+              color: #707070;
+            "
+          >
+            3. Motor DC Mini Pump
+          </h1>
+        </div>
+        <div
+          class="col-1"
+          style="margin-top: 40px; height: 200px; width: 100px"
+        >
+          <h1
+            style="
+              font-size: 20px;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              color: #707070;
+              text-align: center;
+            "
+          >
+            MODE LAMPU
+          </h1>
+          <div class="row">
+            <div class="col" style="margin-left: 20px">
+              <button
+                onclick="lamputimer()"
+                style="
+                  background-color: greenyellow;
+                  height: 30px;
+                  width: 100px;
+                  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                  font-weight: bold;
+                  border-radius: 10px;
+                "
+              >
+                TIMER
+              </button>
+            </div>
+            <div class="col" style="margin-right: 20px">
+              <button
+                onclick="lampuauto()"
+                style="
+                  background-color: crimson;
+                  height: 30px;
+                  width: 100px;
+                  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                  font-weight: bold;
+                  border-radius: 10px;
+                "
+              >
+                AUTO
+              </button>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 10px">
+            <div class="col" style="margin-left: 20px">
+              <button
+                onclick="halamantimer()"
+                style="
+                  background-color: greenyellow;
+                  height: 30px;
+                  width: 100px;
+                  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                  font-weight: bold;
+                  border-radius: 10px;
+                "
+              >
+                TIMER
+              </button>
+            </div>
+            <div class="col" style="margin-right: 20px">
+              <button
+                onclick="halamanauto()"
+                style="
+                  background-color: crimson;
+                  height: 30px;
+                  width: 100px;
+                  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                  font-weight: bold;
+                  border-radius: 10px;
+                "
+              >
+                AUTO
+              </button>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 10px">
+            <div class="col"></div>
+            <div class="col"></div>
+          </div>
+        </div>
+        <div
+          class="col-2"
+          style="margin-top: 40px; height: 200px; width: 200px"
+        >
+          <h1
+            style="
+              font-size: 20px;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              color: #707070;
+              text-align: center;
+            "
+          >
+            DAYA
+          </h1>
+          <input
+            type="text"
+            style="
+              margin: 10px;
+
+              text-align: center;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            "
+            id="dayahalaman"
+            name="dayahalaman"
+          />
+          <input
+            type="text"
+            style="
+              margin: 10px;
+              text-align: center;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            "
+            id="dayaruangtamu"
+          />
+          <input
+            type="text"
+            style="
+              margin: 10px;
+              text-align: center;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            "
+            id="dayapump"
+          />
+        </div>
+        <div
+          class="col-2"
+          style="margin-top: 40px; height: 200px; width: 200px"
+        >
+          <h1
+            style="
+              font-size: 20px;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              color: #707070;
+              text-align: center;
+            "
+          >
+            TIME ON
+          </h1>
+          <input
+            type="text"
+            style="
+              margin: 10px;
+              text-align: center;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            "
+            id="timeronhalaman"
+          />
+          <input
+            type="text"
+            style="
+              margin: 10px;
+              text-align: center;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            "
+            id="timeronruangtamu"
+          />
+          <input
+            type="text"
+            style="
+              margin: 10px;
+              text-align: center;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            "
+            id="timeronpump"
+          />
+        </div>
+        <div
+          class="col-2"
+          style="margin-top: 40px; height: 200px; width: 200px"
+        >
+          <h1
+            style="
+              font-size: 20px;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              color: #707070;
+              text-align: center;
+            "
+          >
+            TIME OFF
+          </h1>
+          <input
+            type="text"
+            style="
+              margin: 10px;
+              text-align: center;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            "
+            id="timeroffhalaman"
+          />
+          <input
+            type="text"
+            style="
+              margin: 10px;
+              text-align: center;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            "
+            id="timeroffruangtamu"
+          />
+          <input
+            type="text"
+            style="
+              margin: 10px;
+              text-align: center;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            "
+            id="timeroffpump"
+          />
+        </div>
+      </div>
+      <div class="navbar" style="margin-top: 20px">
+        <nav></nav>
+        <button
+          style="
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: aqua;
+            color: black;
+          "
+          onclick="btnsimpan()"
+        >
+          SIMPAN
+        </button>
+      </div>
+    </div>
+    <!--JavaScript-->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <script id="MainScript">
+      var firebaseConfig = {
+        apiKey: "AIzaSyCOkbZJYFDDPZxoYt4VhkUEUjOaKMcGnLo",
+        authDomain: "iotse-b1c10.firebaseapp.com",
+        databaseURL: "https://iotse-b1c10-default-rtdb.firebaseio.com",
+        projectId: "iotse-b1c10",
+        storageBucket: "iotse-b1c10.appspot.com",
+        messagingSenderId: "270480060594",
+        appId: "1:270480060594:web:6cbccdbb40e653c14e99ab",
+      };
+      firebase.initializeApp(firebaseConfig);
+
+      var halaman = document.getElementById("halamanstatus");
+      var ruangtamu = document.getElementById("ruangtamustatus");
+      var dhalaman = document.getElementById("dayahalaman");
+      var druangtamu = document.getElementById("dayaruangtamu");
+      var dpump = document.getElementById("dayapump");
+      var dtimeronhalaman = document.getElementById("timeronhalaman");
+      var dtimeronruangtamu = document.getElementById("timeronruangtamu");
+      var dtimeronpump = document.getElementById("timeronpump");
+      var dtimeroffhalaman = document.getElementById("timeroffhalaman");
+      var dtimeroffpump = document.getElementById("timeroffpump");
+      var dtimeroffruangtamu = document.getElementById("timeroffruangtamu");
+      var dtdc = document.getElementById("inputtdc");
+
+      var dbRef = firebase.database().ref();
+      //Halaman
+      dbRef
+        .child("modelampu")
+        .on("value", (snap) => (halaman.innerText = snap.val()));
+      function lamputimer() {
+        firebase.database().ref("modelampu").set("TIMER");
+      }
+      function lampuauto() {
+        firebase.database().ref("modelampu").set("AUTO");
+      }
+      //RuangTamu
+      dbRef
+        .child("modehalaman")
+        .on("value", (snap) => (ruangtamu.innerText = snap.val()));
+      function halamantimer() {
+        firebase.database().ref("modehalaman").set("TIMER");
+      }
+      function halamanauto() {
+        firebase.database().ref("modehalaman").set("AUTO");
+      }
+      //Button Simpan
+      function btnsimpan() {
+        var dayahalaman = document.getElementById("dayahalaman");
+        var dayaruangtamu = document.getElementById("dayaruangtamu");
+        var dayapump = document.getElementById("dayapump");
+        firebase.database().ref("dayahalaman").set(dayahalaman.value);
+        firebase.database().ref("dayaruangtamu").set(dayaruangtamu.value);
+        firebase.database().ref("dayapump").set(dayapump.value);
+
+        var timeronhalaman = document.getElementById("timeronhalaman");
+        var timeronruangtamu = document.getElementById("timeronruangtamu");
+        var timeronpump = document.getElementById("timeronpump");
+        firebase.database().ref("timeronhalaman").set(timeronhalaman.value);
+        firebase.database().ref("timeronruangtamu").set(timeronruangtamu.value);
+        firebase.database().ref("timeronpump").set(timeronpump.value);
+
+        var timeroffhalaman = document.getElementById("timeroffhalaman");
+        var timeroffruangtamu = document.getElementById("timeroffruangtamu");
+        var timeroffpump = document.getElementById("timeroffpump");
+        firebase.database().ref("timeroffhalaman").set(timeroffhalaman.value);
+        firebase
+          .database()
+          .ref("timeroffruangtamu")
+          .set(timeroffruangtamu.value);
+        firebase.database().ref("timeroffpump").set(timeroffpump.value);
+
+        var tdc = document.getElementById("inputtdc");
+        firebase.database().ref("tdc").set(tdc.value);
+      }
+      dbRef.child("tdc").on("value", (snap) => (dtdc.value = snap.val()));
+      dbRef
+        .child("dayahalaman")
+        .on("value", (snap) => (dhalaman.value = snap.val()));
+      dbRef
+        .child("dayaruangtamu")
+        .on("value", (snap) => (druangtamu.value = snap.val()));
+      dbRef.child("dayapump").on("value", (snap) => (dpump.value = snap.val()));
+      dbRef
+        .child("timeronhalaman")
+        .on("value", (snap) => (dtimeronhalaman.value = snap.val()));
+      dbRef
+        .child("timeronruangtamu")
+        .on("value", (snap) => (dtimeronruangtamu.value = snap.val()));
+      dbRef
+        .child("timeronpump")
+        .on("value", (snap) => (dtimeronpump.value = snap.val()));
+      dbRef
+        .child("timeroffhalaman")
+        .on("value", (snap) => (dtimeroffhalaman.value = snap.val()));
+      dbRef
+        .child("timeroffruangtamu")
+        .on("value", (snap) => (dtimeroffruangtamu.value = snap.val()));
+      dbRef
+        .child("timeroffpump")
+        .on("value", (snap) => (dtimeroffpump.value = snap.val()));
+      //dhalaman.value = "test";
+    </script>
+  </body>
+</html>
