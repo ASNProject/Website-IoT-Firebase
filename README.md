@@ -13,7 +13,7 @@ Website ini merupakan website IoT (Internet of Things) untuk mengontrol perangka
 #### 1. Tampilan Login dan Register<br/><br/>
 ![web1](https://user-images.githubusercontent.com/49858542/138451412-75b755d4-8c35-4140-95ce-248c9d28d21b.JPG)<br/><br/>
 #### 2. Tampilan Home Dashboard IoT<br/><br/>
-![web2](https://user-images.githubu<br/>sercontent.com/49858542/138451416-f3abf799-bf19-4b93-8df5-bff8f3055b7f.JPG)<br/><br/>
+![web2](https://user-images.githubusercontent.com/49858542/138451416-f3abf799-bf19-4b93-8df5-bff8f3055b7f.JPG)<br/><br/>
 #### 3. Tampilan Setting IoT<br/><br/>
 ![web3](https://user-images.githubusercontent.com/49858542/138451418-bd8fd724-0bc3-42cb-949b-e499a255d70d.JPG)<br/><br/>
 #### 4. Tampilan Hasil Rekap Biaya Penggunaan Daya<br/><br/>
