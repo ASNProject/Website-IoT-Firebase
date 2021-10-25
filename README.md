@@ -8,6 +8,7 @@ Website ini merupakan website IoT (Internet of Things) untuk mengontrol perangka
 3. Tampilan Setting untuk mengatur konfigurasi dari perangkat IoT seperti penggunaan Auto(Kontrol sensor dan Manual) dan Timer(Perangkat dikendalian dengan Timer)<br/>
 4. Tampilan Rekap untuk menampilkan hasil perhitungan biaya penggunaan daya<br/>
 <br/>
+Program untuk NodemCU [klik disini](https://github.com/ASNProject/IoT-NodemCU-dan-Firebase-.git)
 
 ### TAMPILAN WEBSITE<br/>
 #### 1. Tampilan Login dan Register<br/><br/>
