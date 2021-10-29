@@ -2,7 +2,7 @@
 
 #### Tutorial Firebase untuk JavaScript [klik disini](https://github.com/ASNProject/Firebase-JavaScript.git)<br/>
 ### ABOUT<br/>
-Website ini merupakan website IoT (Internet of Things) untuk mengontrol perangkat elektronik. Pada project ini website dibuat dengan menggunakan HTML/JavaScript dan Firebase sebagai Realtime database. Perangkat IoT menggunakan NODEMCU V3 yang didukung dengan beberapa sensor Suhu LM35 dan sensor LDR serta tiga buah relay sebagai saklar. Fitur yang dimiliki pada project ini antara lain:<br/>
+Website ini merupakan website IoT (Internet of Things) untuk mengontrol perangkat elektronik. Pada project ini website dibuat dengan menggunakan HTML/JavaScript dan Firebase sebagai Realtime database. Perangkat IoT menggunakan NODEMCU V3 yang didukung dengan beberapa sensor Suhu LM35 dan sensor LDR serta tiga buah relay sebagai saklar. Program untuk NodemCU  [disini](https://github.com/ASNProject/IoT-NodemCU-dan-Firebase-.git). Fitur yang dimiliki pada project ini antara lain:<br/>
 1. Login dan Register<br/>
 2. Tampilan Dashboard yang berisi keterangan dan kontrol perangkat IoT<br/>
 3. Tampilan Setting untuk mengatur konfigurasi dari perangkat IoT seperti penggunaan Auto(Kontrol sensor dan Manual) dan Timer(Perangkat dikendalian dengan Timer)<br/>
